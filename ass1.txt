@@ -1,0 +1,338 @@
+SQL> select upper('mayur') from dual;
+
+UPPER                                                                                                                                                 
+-----                                                                                                                                                 
+MAYUR                                                                                                                                                 
+
+SQL> select lower(ename) from emp;
+
+LOWER(ENAM                                                                                                                                            
+----------                                                                                                                                            
+smith                                                                                                                                                 
+allen                                                                                                                                                 
+ward                                                                                                                                                  
+jones                                                                                                                                                 
+martin                                                                                                                                                
+blake                                                                                                                                                 
+clark                                                                                                                                                 
+scott                                                                                                                                                 
+king                                                                                                                                                  
+turner                                                                                                                                                
+adams                                                                                                                                                 
+
+LOWER(ENAM                                                                                                                                            
+----------                                                                                                                                            
+james                                                                                                                                                 
+ford                                                                                                                                                  
+miller                                                                                                                                                
+
+14 rows selected.
+
+SQL> select initcap(ename) from emp;
+
+INITCAP(EN                                                                                                                                            
+----------                                                                                                                                            
+Smith                                                                                                                                                 
+Allen                                                                                                                                                 
+Ward                                                                                                                                                  
+Jones                                                                                                                                                 
+Martin                                                                                                                                                
+Blake                                                                                                                                                 
+Clark                                                                                                                                                 
+Scott                                                                                                                                                 
+King                                                                                                                                                  
+Turner                                                                                                                                                
+Adams                                                                                                                                                 
+
+INITCAP(EN                                                                                                                                            
+----------                                                                                                                                            
+James                                                                                                                                                 
+Ford                                                                                                                                                  
+Miller                                                                                                                                                
+
+14 rows selected.
+
+SQL> select concat(ename, empno) from emp;
+
+CONCAT(ENAME,EMPNO)                                                                                                                                   
+--------------------------------------------------                                                                                                    
+SMITH7369                                                                                                                                             
+ALLEN7499                                                                                                                                             
+WARD7521                                                                                                                                              
+JONES7566                                                                                                                                             
+MARTIN7654                                                                                                                                            
+BLAKE7698                                                                                                                                             
+CLARK7782                                                                                                                                             
+SCOTT7788                                                                                                                                             
+KING7839                                                                                                                                              
+TURNER7844                                                                                                                                            
+ADAMS7876                                                                                                                                             
+
+CONCAT(ENAME,EMPNO)                                                                                                                                   
+--------------------------------------------------                                                                                                    
+JAMES7900                                                                                                                                             
+FORD7902                                                                                                                                              
+MILLER7934                                                                                                                                            
+
+14 rows selected.
+
+SQL> select length(ename) from emp;
+
+LENGTH(ENAME)                                                                                                                                         
+-------------                                                                                                                                         
+            5                                                                                                                                         
+            5                                                                                                                                         
+            4                                                                                                                                         
+            5                                                                                                                                         
+            6                                                                                                                                         
+            5                                                                                                                                         
+            5                                                                                                                                         
+            5                                                                                                                                         
+            4                                                                                                                                         
+            6                                                                                                                                         
+            5                                                                                                                                         
+
+LENGTH(ENAME)                                                                                                                                         
+-------------                                                                                                                                         
+            5                                                                                                                                         
+            4                                                                                                                                         
+            6                                                                                                                                         
+
+14 rows selected.
+
+SQL> select replace('dinga','d','p') from dual;
+
+REPLA                                                                                                                                                 
+-----                                                                                                                                                 
+pinga                                                                                                                                                 
+
+SQL> set lines 150 pages 150;
+SQL> select trim (leading 'k' from 'komal') from dual;
+
+TRIM                                                                                                                                                  
+----                                                                                                                                                  
+omal                                                                                                                                                  
+
+SQL> select trim (trailing 'l' from 'komal') from dual;
+
+TRIM                                                                                                                                                  
+----                                                                                                                                                  
+koma                                                                                                                                                  
+
+SQL> select substr('beauty parlour',2,4) from dual;
+
+SUBS                                                                                                                                                  
+----                                                                                                                                                  
+eaut                                                                                                                                                  
+
+SQL> select instr('hello welcome','l',3,2) from dual;
+
+INSTR('HELLOWELCOME','L',3,2)                                                                                                                         
+-----------------------------                                                                                                                         
+                            4                                                                                                                         
+
+SQL> select sysdate from dual;
+
+SYSDATE                                                                                                                                               
+---------                                                                                                                                             
+06-OCT-19                                                                                                                                             
+
+SQL> select systimestamp from dual;
+
+SYSTIMESTAMP                                                                                                                                          
+---------------------------------------------------------------------------                                                                           
+06-OCT-19 10.28.38.624000 PM +05:30                                                                                                                   
+
+SQL> select sysdate+4 from dual;
+
+SYSDATE+4                                                                                                                                             
+---------                                                                                                                                             
+10-OCT-19                                                                                                                                             
+
+SQL> select add_months(sysdate,2) from dual;
+
+ADD_MONTH                                                                                                                                             
+---------                                                                                                                                             
+06-DEC-19                                                                                                                                             
+
+SQL> select months_between(sysdate,'01-aug-18') from dual;
+
+MONTHS_BETWEEN(SYSDATE,'01-AUG-18')                                                                                                                   
+-----------------------------------                                                                                                                   
+                         14.1915838                                                                                                                   
+
+SQL> select months_between(sysdate,'01-aug-20') from dual;
+
+MONTHS_BETWEEN(SYSDATE,'01-AUG-20')                                                                                                                   
+-----------------------------------                                                                                                                   
+                         -9.8083893                                                                                                                   
+
+SQL> select next_day(sysdate,'thu') from dual;
+
+NEXT_DAY(                                                                                                                                             
+---------                                                                                                                                             
+10-OCT-19                                                                                                                                             
+
+SQL> select last_day(sysdate) from dual;
+
+LAST_DAY(                                                                                                                                             
+---------                                                                                                                                             
+31-OCT-19                                                                                                                                             
+
+SQL> select round(2/7,2) from dual;
+
+ROUND(2/7,2)                                                                                                                                          
+------------                                                                                                                                          
+         .29                                                                                                                                          
+
+SQL> select round(3.1472,2) from dual;
+
+ROUND(3.1472,2)                                                                                                                                       
+---------------                                                                                                                                       
+           3.15                                                                                                                                       
+
+SQL> select trunc(3.1472,2) from dual;
+
+TRUNC(3.1472,2)                                                                                                                                       
+---------------                                                                                                                                       
+           3.14                                                                                                                                       
+
+SQL> select sqrt(64) from dual;
+
+  SQRT(64)                                                                                                                                            
+----------                                                                                                                                            
+         8                                                                                                                                            
+
+SQL> select abs(-64) from dual;
+
+  ABS(-64)                                                                                                                                            
+----------                                                                                                                                            
+        64                                                                                                                                            
+
+SQL> select mod(7,2) from dual;
+
+  MOD(7,2)                                                                                                                                            
+----------                                                                                                                                            
+         1                                                                                                                                            
+
+SQL> select ceil(14.23) from dual;
+
+CEIL(14.23)                                                                                                                                           
+-----------                                                                                                                                           
+         15                                                                                                                                           
+
+SQL> select floor(14.23) from dual;
+
+FLOOR(14.23)                                                                                                                                          
+------------                                                                                                                                          
+          14                                                                                                                                          
+
+SQL> select to_char(sysdate, 'year') from dual;
+
+TO_CHAR(SYSDATE,'YEAR')                                                                                                                               
+------------------------------------------                                                                                                            
+twenty nineteen                                                                                                                                       
+
+SQL> select power(2,2) from dual;
+
+POWER(2,2)                                                                                                                                            
+----------                                                                                                                                            
+         4                                                                                                                                            
+
+SQL> select reverse('mayur') from dual;
+
+REVER                                                                                                                                                 
+-----                                                                                                                                                 
+ruyam                                                                                                                                                 
+
+SQL> select * from emp;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO                                                                 
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------                                                                 
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20                                                                 
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30                                                                 
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500         30                                                                 
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20                                                                 
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400         30                                                                 
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30                                                                 
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450                    10                                                                 
+      7788 SCOTT      ANALYST         7566 19-APR-87       3000                    20                                                                 
+      7839 KING       PRESIDENT            17-NOV-81       5000                    10                                                                 
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0         30                                                                 
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100                    20                                                                 
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30                                                                 
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20                                                                 
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                    10                                                                 
+
+14 rows selected.
+
+SQL> select ename, comm, nvl(comm,100) from emp;
+
+ENAME            COMM NVL(COMM,100)                                                                                                                   
+---------- ---------- -------------                                                                                                                   
+SMITH                           100                                                                                                                   
+ALLEN             300           300                                                                                                                   
+WARD              500           500                                                                                                                   
+JONES                           100                                                                                                                   
+MARTIN           1400          1400                                                                                                                   
+BLAKE                           100                                                                                                                   
+CLARK                           100                                                                                                                   
+SCOTT                           100                                                                                                                   
+KING                            100                                                                                                                   
+TURNER              0             0                                                                                                                   
+ADAMS                           100                                                                                                                   
+JAMES                           100                                                                                                                   
+FORD                            100                                                                                                                   
+MILLER                          100                                                                                                                   
+
+14 rows selected.
+
+SQL> select ename, job, sal, decode(job, 'SALESMAN', sal+500, 'CLERK', sal+1000, sal) as inc_salary from emp;
+
+ENAME      JOB              SAL INC_SALARY                                                                                                            
+---------- --------- ---------- ----------                                                                                                            
+SMITH      CLERK            800       1800                                                                                                            
+ALLEN      SALESMAN        1600       2100                                                                                                            
+WARD       SALESMAN        1250       1750                                                                                                            
+JONES      MANAGER         2975       2975                                                                                                            
+MARTIN     SALESMAN        1250       1750                                                                                                            
+BLAKE      MANAGER         2850       2850                                                                                                            
+CLARK      MANAGER         2450       2450                                                                                                            
+SCOTT      ANALYST         3000       3000                                                                                                            
+KING       PRESIDENT       5000       5000                                                                                                            
+TURNER     SALESMAN        1500       2000                                                                                                            
+ADAMS      CLERK           1100       2100                                                                                                            
+JAMES      CLERK            950       1950                                                                                                            
+FORD       ANALYST         3000       3000                                                                                                            
+MILLER     CLERK           1300       2300                                                                                                            
+
+14 rows selected.
+
+SQL> select extract (month from sysdate), extract (day from to_date('date')) from dual;
+select extract (month from sysdate), extract (day from to_date('date')) from dual
+                                                               *
+ERROR at line 1:
+ORA-01858: a non-numeric character was found where a numeric was expected 
+
+
+SQL> select extract (month from sysdate), extract (day from to_date(sysdate)) from dual;
+
+EXTRACT(MONTHFROMSYSDATE) EXTRACT(DAYFROMTO_DATE(SYSDATE))                                                                                            
+------------------------- --------------------------------                                                                                            
+                       10                                6                                                                                            
+
+SQL> select to_date(06-10-19
+  2  ) from dual;
+select to_date(06-10-19
+                    *
+ERROR at line 1:
+ORA-01847: day of month must be between 1 and last day of month 
+
+
+SQL> select to_date(sysdate) from dual;
+
+TO_DATE(S                                                                                                                                             
+---------                                                                                                                                             
+06-OCT-19                                                                                                                                             
+
+SQL> spool off;
