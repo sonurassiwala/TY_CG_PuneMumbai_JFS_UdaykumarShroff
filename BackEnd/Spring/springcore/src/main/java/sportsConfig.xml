@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	
+	<bean id="sports"
+		class="com.capgemini.springcore.beans.Sports">
+		<property name="name" value="Cricket" />
+		<property name="totalPlayers" value="11" />
+		<!-- <property name="type" value="Allopathic" /> -->
+		<property name="teamInfo">
+			<map>
+				<entry key="India" value="MS Dhoni"/>
+				<entry key="Australia" value="Aron Finch"/>
+				<entry key="Pakistan" value="Sarfaraz Ahemad"/>
+			</map>
+		</property>
+	</bean>
+
+</beans>

@@ -1,0 +1,8 @@
+<div class="col-md-3 float-left">
+    <div class="card card-body" *ngFor='let bike of bikes'>
+        <img [src]="bike.imgURL" class="card-img-top" 
+        (click)='selectBike(bike)' alt="">
+        <p class="text-center">{{bike.brand}}</p>
+    </div>
+</div>
+<app-bike-details [bike]='selectedBike'></app-bike-details>

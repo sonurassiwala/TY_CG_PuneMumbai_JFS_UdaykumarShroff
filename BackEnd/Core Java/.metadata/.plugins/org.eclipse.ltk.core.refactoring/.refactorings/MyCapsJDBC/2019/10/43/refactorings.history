@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;ShowFoodItems.java&apos; to &apos;HotelBilling/src/com.capgemini.hotelbilling&apos;&#x0D;&#x0A;- Original project: &apos;MyCapsJDBC&apos;&#x0D;&#x0A;- Destination element: &apos;HotelBilling/src/com.capgemini.hotelbilling&apos;&#x0D;&#x0A;- Original element: &apos;com.capgemini.jdbc.ShowFoodItems.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="=HotelBilling/src&lt;com.capgemini.hotelbilling" element1="/src&lt;com.capgemini.jdbc{ShowFoodItems.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1571754805065" units="1" version="1.0"/>
+</session>

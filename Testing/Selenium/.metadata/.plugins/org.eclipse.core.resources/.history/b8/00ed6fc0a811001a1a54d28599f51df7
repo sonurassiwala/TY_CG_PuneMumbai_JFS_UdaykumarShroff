@@ -1,0 +1,22 @@
+package com.capgemini.selenium.webdriver;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class TestIOne {
+
+	static {
+		System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
+	}
+	
+	public static void main(String[] args) {
+		
+		ChromeDriver driver = new ChromeDriver();
+		driver.get("https://demo.actitime.com/");
+		driver.findElement(By.id("username")).sendKeys("admin");
+		driver.findElement(By.id("pwd")).sendKeys("manager");
+		driver.findElement(By.xpath("//*[@id=\"loginButton\"]/div")).click();
+		
+	}
+
+}

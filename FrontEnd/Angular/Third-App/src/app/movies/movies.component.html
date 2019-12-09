@@ -1,0 +1,15 @@
+<div class="col-md-4 offset-4">
+    <input type="search" name="search" class="form-control"
+    placeholder="Enter Movie to Search" #Search
+    (keyup)='searchMovies(Search)'>
+</div>
+<!-- <div class="container col-md-3 card card-body float-left"
+*ngFor='let movie of http.movies' style="height: 500px;">
+    <img [src]="movie.Poster" alt="" class="card-img-top">
+    <p class="text-center text-muted">{{movie.Title}}</p>
+</div> -->
+<div class="container col-md-3 card card-body float-left"
+*ngFor='let movie of movies' style="height: 500px;">
+    <img [src]="movie.Poster" alt="movie poster" class="card-img-top">
+    <p class="text-center text-muted">{{movie.Title}}</p>
+</div>

@@ -1,0 +1,16 @@
+package com.capgemini.junit.junit_jupitor;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class SumTest {
+
+	@Test
+	public void testAdd() {
+		Sum s = new Sum();
+		int i = s.add(10, 20);
+		assertEquals(30, i);
+	}
+
+}

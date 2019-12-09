@@ -1,0 +1,14 @@
+package com.capgemini.selenium.webdriver;
+
+public class TestIOne {
+
+	static {
+		System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
+	}
+	
+	public static void main(String[] args) {
+		
+
+	}
+
+}

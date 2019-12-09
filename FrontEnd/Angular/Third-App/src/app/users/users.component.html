@@ -1,0 +1,18 @@
+<div class="container mt-5">
+    <table class="table table-bordered table-hover">
+        <thead class="thead-dark">
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone no</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td>{{user.id}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.phone}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

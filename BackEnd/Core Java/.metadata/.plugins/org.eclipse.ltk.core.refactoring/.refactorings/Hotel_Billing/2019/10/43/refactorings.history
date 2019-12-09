@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;com.capgemini.hotelbbilling.hotelfactory&apos; to &apos;com.capgemini.hotelbilling.hotelfactory&apos;&#x0D;&#x0A;- Original project: &apos;Hotel_Billing&apos;&#x0D;&#x0A;- Original element: &apos;Hotel_Billing/src/com.capgemini.hotelbbilling.hotelfactory&apos;&#x0D;&#x0A;- Renamed element: &apos;Hotel_Billing/src/com.capgemini.hotelbilling.hotelfactory&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;com.capgemini.hotelbbilling.hotelfactory&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;com.capgemini.hotelbbilling.hotelfactory" name="com.capgemini.hotelbilling.hotelfactory" qualified="false" references="true" stamp="1571929501525" textual="false" version="1.0"/>
+</session>

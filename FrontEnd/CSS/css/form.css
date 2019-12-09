@@ -1,0 +1,52 @@
+form{
+    border: 1px solid black ;
+    border-radius: 25px;
+    width: 360px;
+    height: 360px;
+    margin-left: 579px;
+    margin-top: 133px;
+    text-align: center;
+    background-image: url("/Image/giphy.webp");
+    font-size: 25px;
+    color: black;
+    box-shadow:  10px 10px 0 rgb(7, 68, 15);
+    font-family: cursive;
+}
+input[type="text"], input[type="password"]{
+    width: 200px;
+    height: 20px;
+    border: 1px solid red;
+    border-radius: 50px;
+    margin: 10px;
+    outline: none;
+    text-align: center;
+}
+input[type="submit"]{
+    border: 2px solid red;
+    padding: 5px 20px;
+    border-radius: 25px;
+    outline: none;
+}
+input[type="submit"]:hover{
+    background-color: blue;
+    cursor: pointer;
+}
+input[type="datetime-local"]{
+    border: 2px solid red;
+    padding: 5px 20px;
+    border-radius: 25px;
+    outline: none;
+}
+input[type="range"]{
+    color: black;
+}
+input[type="search"]{
+    border: 2px solid red;
+    padding: 5px 20px;
+    border-radius: 25px;
+    outline: none;
+}
+body{
+    background-image: url("/Image/motorcycle-4562069__340.jpg");
+    background-size: cover;
+}

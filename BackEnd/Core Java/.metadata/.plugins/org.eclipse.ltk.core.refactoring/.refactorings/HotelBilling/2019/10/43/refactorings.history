@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.capgemini.hotelbilling.FoodOrder&apos; to &apos;AddItems&apos;&#x0D;&#x0A;- Original project: &apos;HotelBilling&apos;&#x0D;&#x0A;- Original element: &apos;com.capgemini.hotelbilling.FoodOrder&apos;&#x0D;&#x0A;- Renamed element: &apos;com.capgemini.hotelbilling.AddItems&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;FoodOrder&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.capgemini.hotelbilling{FoodOrder.java[FoodOrder" matchStrategy="1" name="AddItems" qualified="false" references="true" similarDeclarations="false" stamp="1571758118360" textual="false" version="1.0"/>
+</session>

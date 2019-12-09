@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Inline local variable &apos;com.capgemini.exception.custom.Validator.verify().inv&apos; in &apos;com.capgemini.exception.custom.Validator.verify()&apos;&#x0D;&#x0A;- Original project: &apos;CustomException&apos;&#x0D;&#x0A;- Original element: &apos;com.capgemini.exception.custom.Validator.verify().inv&apos;" description="Inline local variable &apos;inv&apos;" id="org.eclipse.jdt.ui.inline.temp" input="/src&lt;com.capgemini.exception.custom{Validator.java" selection="189 3" stamp="1570184963339" version="1.0"/>
+</session>

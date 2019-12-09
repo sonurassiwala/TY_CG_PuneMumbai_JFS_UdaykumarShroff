@@ -1,0 +1,23 @@
+<!-- Style Binding -->
+<h1 [style.background]= 'flag ? "green" : "orange"'
+    [style.color]= 'flag ? "red" : "green"'
+>{{name}}</h1>
+<h1>{{123+321}}</h1>
+<!-- Class Binding -->
+<h1 [class.text-primary]='flag' [class.bg-danger]='flag'>Class Binding</h1>
+<!-- Interpolation -->
+<img src="{{imgURL}}" alt=""><br>
+<!-- Property Binding -->
+<!-- <img [src]="imgURL" alt=""> -->
+
+<!-- Template Reference Variable -->
+<input type="text" #myInput (keyup)='eventOccured(myInput)'>
+<!-- Event Binding -->
+<button class="btn btn-primary" (click)='eventOccured(myInput)'>
+    Click Me
+</button><br>
+
+<!-- Two Way Data Binding -->
+
+<input type="text" [(ngModel)]='inputData'>
+<h1>{{inputData}}</h1>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Collection&apos; to &apos;CollectionFramework&apos;" description="Rename resource &apos;Collection&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/Collection" name="CollectionFramework" stamp="1570609685545" updateReferences="true"/>
+</session>

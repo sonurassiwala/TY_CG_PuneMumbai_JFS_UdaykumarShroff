@@ -1,0 +1,14 @@
+<div class="col-md-4 offset-md-4 mt-5">
+    <form #loginForm="ngForm" (ngSubmit)='loginUser(loginForm)'>
+        <h4 class="text-center">Login</h4>
+        <div class="alert alert-danger" *ngIf='error'>
+            {{error}}
+        </div>
+        <input type="email" name="email" #email="ngModel" ngModel class="form-control mb-3" placeholder="Enter Email">
+        <input type="password" name="password" #password="ngModel" ngModel class="form-control mb-3"
+            placeholder="Enter Password">
+        <button class="btn btn-primary float-right" type="submit">
+            Login
+        </button>
+    </form>
+</div>

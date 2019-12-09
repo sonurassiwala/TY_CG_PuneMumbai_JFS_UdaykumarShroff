@@ -1,0 +1,24 @@
+package com.capgemini.junit.junit_jupitor;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+public class SchoolTest {
+
+	private School school;
+	
+	@BeforeEach
+	public void createObject() {
+		school = new School();
+	}
+	
+	@Test
+	public void testRegisterStudent() {
+		Student student = new Student("Uday", 77.52, 'M');
+		Student stu = school.registerStudent(student);
+		assertEquals(1, stu.getId());
+	}			0
+	
+}

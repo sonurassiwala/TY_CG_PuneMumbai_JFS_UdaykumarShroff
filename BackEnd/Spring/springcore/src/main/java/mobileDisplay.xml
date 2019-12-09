@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean definitions here -->
+
+	<bean id="mobile" class="com.capgemini.springcore.beans.MobileBean" autowire="byType">
+		<property name="brandName" value="Samsunng"/>
+		<property name="modelName" value="A50"/>
+		<property name="price" value="23000"/>
+	</bean>
+	
+	<bean id="" class="com.capgemini.springcore.beans.MobileDisplayBeans">
+		<property name="displaySize" value="7"/>
+		<property name="resolution" value="1080*720"/>
+	</bean>
+	
+
+</beans>

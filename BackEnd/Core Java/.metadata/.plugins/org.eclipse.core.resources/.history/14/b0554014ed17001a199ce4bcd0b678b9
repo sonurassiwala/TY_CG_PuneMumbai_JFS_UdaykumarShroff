@@ -1,0 +1,28 @@
+package com.capgemini.datastructure.algorithm;
+
+public class AlgorithmAnalysis {
+
+	public static void main(String[] args) {
+		long number = 99999999L;
+		System.out.println(addUpto(number));
+		System.out.println(addUptoQuick(number));
+		
+	}
+	
+	public static long addUpto(Long number) {
+		
+		long total = 0L;
+		
+		for(long i = 0; i<= number; i++) {
+			total = i + total;
+		}
+		
+		return total;
+	}
+	
+	public static long addUptoQuick(Long number) {
+		
+		
+		return number*(number+1)/2;
+	}
+}

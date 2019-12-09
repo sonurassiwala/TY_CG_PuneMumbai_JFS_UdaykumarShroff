@@ -1,0 +1,23 @@
+<div class="container mt-5">
+    <table class="table table-bordered table-hover">
+        <thead class="thead-dark">
+            <th>Index</th>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Image</th>
+            <th>URL</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let gitUser of gitUsers; index as i">
+                <td>{{i+1}}</td>
+                <td>{{gitUser.node_id}}</td>
+                <td>{{gitUser.login}}</td>
+                <td>
+                    <img [src]="gitUser.avatar_url" 
+                    width="200 px" height="200 px" alt="user img">
+                </td>
+                <td>{{gitUser.url}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

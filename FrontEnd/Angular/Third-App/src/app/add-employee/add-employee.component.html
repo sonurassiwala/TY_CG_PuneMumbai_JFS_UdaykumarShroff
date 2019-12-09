@@ -1,0 +1,36 @@
+<div class="col-md-4 offset-4 m-auto mt-5">
+    <form #addEmployee="ngForm" (ngSubmit)="submitForm(addEmployee)">
+        <div class="form-group">
+            <label for="empId">Employee Id:</label>
+            <input type="number" name="empId" class="form-control" #empId="ngModel" ngModel required>
+        </div>
+        <div class="form-group">
+            <label for="name">Employee Name:</label>
+            <input type="text" name="name" class="form-control" #name="ngModel" ngModel required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email Id:</label>
+            <input type="email" name="email" class="form-control" #email="ngModel" ngModel required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="number" name="phone" class="form-control" #phone="ngModel" ngModel required>
+        </div>
+        <div class="form-group">
+            <label for="status">Status:</label>
+            <select name="status" class="form-control" #status="ngModel" ngModel>
+                <option value="avilable">Available</option>
+                <option value="absent">Absent</option>
+            </select>
+        </div>
+        <div class="btn-group float-right">
+            <button type="reset" class="btn btn-outline-dark">
+                Reset
+            </button>
+            <button type="submit" class="btn btn-outline-primary" [disabled]='addEmployee.invalid'>
+                Submit
+            </button>
+        </div>
+        
+    </form>
+</div>

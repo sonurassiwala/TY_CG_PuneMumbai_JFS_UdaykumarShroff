@@ -1,0 +1,19 @@
+package com.capgemini.datastructure.algorithm;
+
+public class AlgorithmAnalysis {
+
+	public static void main(String[] args) {
+		
+	}
+	
+	public static long addUpto(Long number) {
+		
+		long total = 0L;
+		
+		for(long i = 0; i<= number; i++) {
+			total = i + total;
+		}
+		
+		return 0L;
+	}
+}
