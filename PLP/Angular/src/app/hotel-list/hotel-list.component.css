@@ -1,0 +1,68 @@
+
+.searchbar{
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 60px;
+    background-color: #e3e6ec;
+    border-radius: 30px;
+    padding: 10px;
+}
+    
+        .search_input{
+        color: black;
+        border: 0;
+        outline: 0;
+        background: none;
+        width: 0;
+        caret-color:transparent;
+        line-height: 40px;
+        transition: width 0.4s linear;
+        }
+    
+        .searchbar:hover > .search_input{
+        padding: 0 10px;
+        width: 450px;
+        caret-color:red;
+        transition: width 0.4s linear;
+        }
+    
+        .searchbar:hover > .search_icon{
+        background: white;
+        color: #e74c3c;
+        }
+    
+        .search_icon{
+        height: 40px;
+        width: 40px;
+        float: right;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        color:white;
+        text-decoration:none;
+        }
+
+        img{
+            height: 150px;
+        }
+
+        #i1{
+            height: 40px;
+          }
+
+          .cover {
+            background: #2b2d34 url(https://www.purehd.com/hubfs/PureHD_September2019/Images/Home-Slider01.jpg) center;
+            background-size: cover;
+            min-height: 90rem;
+            height: 100vh;
+            border-radius: 0;
+            width: 100%;
+            color: #fff;
+            padding-top: 1rem; }
+        
+            div {
+                font-style: italic;
+                color: black;
+            }
+

@@ -1,0 +1,110 @@
+<app-header></app-header>
+<body>
+    <form class="container col-md-6 offset-4 card card-body" #feedbackForm='ngForm' (ngSubmit)='feedback(feedbackForm)'>
+        <div style="width: 400px;">
+        </div>
+        <div style="padding-bottom: 18px;font-size : 24px;">Please give your feedback...!</div>
+        <div style="padding-bottom: 18px;font-size : 18px;">Please help us improve our services by filling out this
+            form.
+        </div>
+        <div style="display: flex; padding-bottom: 18px;width : 500px;">
+            <div style=" margin-left : 0; margin-right : 1%; width : 49%;">First name<br />
+                <input type="text" id="data_3" name="data_3" style="width: 100%;" class="form-control" />
+            </div>
+            <div style=" margin-left : 1%; margin-right : 0; width : 49%;">Last name<br />
+                <input type="text" id="data_4" name="data_4" style="width: 100%;" class="form-control" />
+            </div>
+        </div>
+        <div style="padding-bottom: 18px;">How friendly were the hotel staff members?<br />
+            <select id="data_7" name="data_7" style="width : 500px;" class="form-control">
+                <option value="" selected disabled>Select</option>
+                <option>Extremely friendly</option>
+                <option>Quite friendly</option>
+                <option>Moderately friendly</option>
+                <option>Sightly friendly</option>
+                <option>Not at all friendly</option>
+            </select>
+        </div>
+        <div style="padding-bottom: 18px;">Overall, how polite were the hotel staff members?<br />
+            <select id="data_9" name="data_9" style="width : 500px;" class="form-control">
+                <option value="" selected disabled>Select</option>
+                <option>Extremely polite</option>
+                <option>Quite polite</option>
+                <option>Moderately polite</option>
+                <option>Sightly polite</option>
+                <option>Not at all polite</option>
+            </select>
+        </div>
+        <div style="padding-bottom: 18px;">Overall, how professional were the hotel staff members?<br />
+            <select id="data_10" name="data_10" style="width : 500px;" class="form-control">
+                <option value="" selected disabled>Select</option>
+                <option>Extremely professional</option>
+                <option>Quite professional</option>
+                <option>Moderately professional</option>
+                <option>Sightly professional</option>
+                <option>Not at all professional</option>
+            </select>
+        </div>
+        <div style="padding-bottom: 18px;">How quick was the check-in process?<br />
+            <select id="data_11" name="data_11" style="width : 500px;" class="form-control">
+                <option value="" selected disabled>Select</option>
+                <option>Extremely quick</option>
+                <option>Quite quick</option>
+                <option>Moderately quick</option>
+                <option>Sightly quick</option>
+                <option>Not at all quick</option>
+            </select>
+        </div>
+        <div style="padding-bottom: 18px;">How clean was your room upon arrival?<br />
+            <select id="data_12" name="data_12" style="width : 500px;" class="form-control">
+                <option value="" selected disabled>Select</option>
+                <option>Extremely clean</option>
+                <option>Quite clean</option>
+                <option>Moderately clean</option>
+                <option>Sightly clean</option>
+                <option>Not at all clean</option>
+            </select>
+        </div>
+        <div style="padding-bottom: 18px;">How well did the housekeeping staff clean your room?<br />
+            <select id="data_12" name="data_12" style="width : 500px;" class="form-control">
+                <option value="" selected disabled>Select</option>
+                <option>Extremely well</option>
+                <option>Quite well</option>
+                <option>Moderately well</option>
+                <option>Sightly well</option>
+                <option>Not at all well</option>
+            </select>
+        </div>
+        <div style="padding-bottom: 18px;">How comfortable were your bed linens?<br />
+            <select id="data_12" name="data_12" style="width : 500px;" class="form-control">
+                <option value="" selected disabled>Select</option>
+                <option>Extremely comfortable</option>
+                <option>Quite comfortable</option>
+                <option>Moderately comfortable</option>
+                <option>Sightly comfortable</option>
+                <option>Not at all comfortable</option>
+            </select>
+        </div>
+        <div style="padding-bottom: 18px;">How affordable was your stay at our hotel?<br />
+            <select id="data_12" name="data_12" style="width : 500px;" class="form-control">
+                <option value="" selected disabled>Select</option>
+                <option>Extremely affordable</option>
+                <option>Quite affordable</option>
+                <option>Moderately affordable</option>
+                <option>Sightly affordable</option>
+                <option>Not at all affordable</option>
+            </select>
+        </div>
+        <div style="padding-bottom: 18px;">Would you recommend this hotel to your friends?<br />
+            <select id="data_8" name="data_8" style="width : 500px;" class="form-control">
+                <option value="" selected disabled>Select</option>
+                <option>Yes</option>
+                <option>No</option>
+                <option>Not sure</option>
+            </select>
+        </div>
+        <div style="padding-bottom: 18px;">
+            <input name="skip_Submit" value="Submit" type="submit" [disabled]='feedbackForm.invalid' />
+        </div>
+    </form>
+</body>

@@ -1,0 +1,71 @@
+body
+{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.fb-profile img.fb-image-lg{
+    z-index: 0;
+    width: 100%; 
+    height: 400px; 
+    margin-bottom: 10px;
+}
+
+.fb-image-profile
+{
+    margin: -90px 10px 0px 50px;
+    z-index: 9;
+    width: 20%; 
+}
+
+@media (max-width:768px)
+{
+    
+.fb-profile-text>h1{
+    font-weight: 700;
+    font-size:16px;
+}
+
+.fb-image-profile
+{
+    margin: -45px 10px 0px 25px;
+    z-index: 9;
+    width: 20%; 
+}
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    /* background-image: url("https://www.keyshotels.com/uploads/dining/0551665001445851553.jpg"); */
+    background-color: #c6d6d8;
+    height: auto;
+  }
+
+  h4 {
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 2.0rem;
+    font-weight: 600; 
+}
+
+  h6 {
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600; 
+}
+
+.cover {
+    /* background: #2b2d34 url(https://images.pexels.com/photos/60217/pexels-photo-60217.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260) center; */
+    background-size: cover;
+    background-color: #c6d6d8;
+    min-height: 70rem;
+    height: auto;
+    border-radius: 0;
+    width: 100%;
+    color: #fff;
+    padding-top: 1rem;
+ }
+
+    div {
+        font-style: italic;
+        color: black;
+    }

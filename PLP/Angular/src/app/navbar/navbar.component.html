@@ -1,0 +1,70 @@
+<nav class="navbar navbar-expand-lg navbar-toggleable-sm navbar-trans navbar-inverse mt-2">
+    <div class="container">
+        <div id="mySidenav" class="sidenav">
+            <!-- <a href="#" class="closebtn" (click)="closeNav()">&times;</a> -->
+            <div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="closeNav()">
+                    <span aria-hidden="true" style="color: cornsilk;">&times;</span>
+                </button>
+            </div>
+            <br>
+            <a routerLink="/front-page">Home</a>
+            <a routerLink="/about-us-navbar">About Us</a>
+            <a routerLink="/contact-us-navbar">Contact Us</a>
+            <a routerLink="/get-services">Services</a>
+        </div>
+        <!-- Use any element to open the sidenav -->
+        <button class="button menu" type="button btn btn-outline btn-primary" (click)="openNav()">MENU</button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <li class="nav-item active" *ngIf='isLoggedIn()'>
+                    <a class="nav-link" routerLink="/front-page">Home</a>
+                </li>
+                <li class="nav-item active" *ngIf='isAdmin() || isUser()'>
+                    <a class="nav-link" routerLink="/hotel-list">Hotel List</a>
+                </li>
+                <li class="nav-item active" *ngIf='isAdmin()'>
+                    <a class="nav-link" routerLink="/addhotel">Add Hotel</a>
+                </li>
+                <li class="nav-item active" *ngIf='isAdmin()'>
+                    <a class="nav-link" routerLink="/addadmin">Add Manager</a>
+                </li>
+                <li class="nav-item active" *ngIf='isUser()'>
+                    <a class="nav-link" routerLink="/booking-history">Booking History</a>
+                </li>
+                <li class="nav-item active" *ngIf='isManager()'>
+                    <a class="nav-link" routerLink="/room-list">Rooms</a>
+                </li>
+                <li class="nav-item active" *ngIf='!isLoggedIn() || isManager()'>
+                    <a class="nav-link" routerLink="/add-room">Add Room</a>
+                </li>
+                <li class="nav-item active" *ngIf='isLoggedIn() && isManager()'>
+                    <a class="nav-link" routerLink="/manager-hotel">Hotel</a>
+                </li>
+                <li class="nav-item active" *ngIf='isLoggedIn() && isAdmin()'>
+                    <a class="nav-link" routerLink="/show-all-user">Users</a>
+                </li>
+                <li class="nav-item active" *ngIf='isLoggedIn() && isAdmin()'>
+                    <a class="nav-link" routerLink="/show-all-managers">Managers</a>
+                </li>
+                <li class="nav-item active" *ngIf='isLoggedIn() && isAdmin()'>
+                    <a class="nav-link" routerLink="/show-all-history">Booking History</a>
+                </li>
+
+            </ul>
+            <ul class="navbar-nav float-right">
+                <li>
+                    &nbsp;<button type="button" class="btn btn-danger"
+                        *ngIf='isLoggedIn() || isUser() || isAdmin() || isManager()' (click)='showProfile()'>
+                        Profile
+                    </button>&nbsp;&nbsp;
+                </li>
+                <li>
+                    <button type="button" class="btn btn-light" *ngIf='isLoggedIn()' (click)='logout()'>
+                        Logout
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

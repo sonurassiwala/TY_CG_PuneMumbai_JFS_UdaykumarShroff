@@ -1,0 +1,39 @@
+<section class="cover">
+	<app-navbar></app-navbar>
+	<div id="booking" class="section">
+		<div class="section-center">
+			<div class="container">
+				<div class="row">
+					<div class="booking-form">
+						<form #bookingForm="ngForm" (ngSubmit)="bookRoom(bookingForm)">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<span class="form-label">Check In </span>
+										<input class="form-control" type="date" name="checkinDate"
+											#checkinDate='ngModel' [min]='todaysDate' ngModel required>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<span class="form-label">Check Out</span>
+										<input class="form-control" type="date" name="checkoutDate"
+											#checkoutDate='ngModel' [min]='checkinDate.value' ngModel required>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-5 offset-3">
+									<div class="form-btn align-center">
+										<button class="submit-btn" [disabled]='bookingForm.invalid'>Book Room</button>
+									</div>
+								</div>
+							</div>
+
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

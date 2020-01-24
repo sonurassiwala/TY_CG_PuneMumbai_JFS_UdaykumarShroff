@@ -1,0 +1,35 @@
+<section class="cover">
+    <app-navbar></app-navbar>
+    <div class="col-md-10 offset-1 mt-5">
+        <table class="table table-bordered" style="border-color: black;">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Booking Id</th>
+                    <th>Hotel Id</th>
+                    <th>Room Number</th>
+                    <th>Amount</th>
+                    <th>Checkin Date</th>
+                    <th>Checkout Date</th>
+                    <th>Mode of Payment</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody class="tbody">
+                <tr *ngFor='let bookData of hotelService.bookedData'>
+                    <td>{{bookData.bookingId}}</td>
+                    <td>{{bookData.hotelId}}</td>
+                    <td>{{bookData.roomId}}</td>
+                    <td>{{bookData.amount}}</td>
+                    <td>{{bookData.checkinDate}}</td>
+                    <td>{{bookData.checkoutDate}}</td>
+                    <td>{{bookData.modeOfPayment}}</td>
+                    <td>
+                        <button class="btn btn-outline-danger" (click)='deleteHistory(bookData)'>
+                            Cancel
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>

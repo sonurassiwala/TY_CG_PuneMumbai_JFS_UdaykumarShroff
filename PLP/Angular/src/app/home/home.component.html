@@ -1,0 +1,35 @@
+<section class="cover text-center">
+  <app-header></app-header>
+  <div class="cover-container pb-5">
+    <div class="cover-inner container">
+      <!-- <h1 class="jumbotron-heading"><em>WELCOME</em> to <strong>ONLINE HOTEL ROOM RESERVATION SYSTEM</strong></h1>
+      <h3 class="lead">Book Online Hotel Rooms At Affordable Price......</h3> -->
+      <!-- <p>
+        <button class="btn btn-success btn-block btn-lg" type="button" (click)='openLogin()'>Login</button>
+        <button class="btn btn-primary btn-block btn-lg" type="button" (click)='openRegister()'>Register</button>
+      </p> -->
+      <h1 style="font-family: cursive; font-style: italic;">BookMyStay</h1>
+      <h4 style="font-family: cursive; font-style: italic;">A legendary welcome, every time...</h4>
+
+      <div class="container h-100">
+        <div class="d-flex justify-content-center h-100">
+          <div class="searchbar">
+            <input class="search_input" type="text" name="" placeholder="Search..." [(ngModel)]='search'
+              placeholder="Enter Location...">
+
+              <a href="#" class="search_icon" (click)='searchHotels(location)'><i class="fas fa-search"><img
+                src="http://www.clker.com/cliparts/z/w/Q/7/f/C/search-logo-hi.png" id='i1' alt=""></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="container mt-4">
+        <div class="col-md-3 card card-body float-left" style="height:250px;"
+          *ngFor='let hotel of hotelService.hotels | filter: search; index as i'>
+          <img [src]="hotel.imgURL" class="img-fluid" alt="" (click)='selectHotel(hotel)' style="height: 170px;">
+          <h5 class="text-center" style="color: black;">{{hotel.hotelName}}</h5>
+          <h6 class="text-center" style="color: black;">{{hotel.location}}</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

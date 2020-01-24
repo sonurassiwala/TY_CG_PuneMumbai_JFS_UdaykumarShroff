@@ -1,0 +1,61 @@
+<body>  
+    <app-header></app-header>
+    <div id="login">
+        <h3 class="text-center text-white pt-5">Login To Continue...</h3>
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                        <form #userLoginForm='ngForm' (ngSubmit)='loginForm(userLoginForm)'>
+                            <h3 class="text-center text-info">Login</h3>
+                            <div class="form-group">
+                                <label for="email">Email : </label>
+                                <input type="email" name="email" #email='ngModel' ngModel minlength="8" email
+                                    class="form-control" placeholder="Enter Email" minlength="8"
+                                    pattern="^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$"
+                                    title="Fill Your Email" required>
+                                <div *ngIf='email.touched && email.invalid'>
+                                    <p class="text text-danger" *ngIf='email.errors.required'>This field is mandatory</p>
+                                    <p class="text text-danger" *ngIf='email.errors.minlength'>It should be minimum of 12
+                                        character</p>
+                                    <p class="text text-danger" *ngIf='email.errors.email'>This field can only contain email
+                                    </p>
+                                    <p class="text text-danger" *ngIf='email.errors.pattern'>Email should be in the form
+                                        Qwerty@123gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" name="password" #password='ngModel' ngModel
+                                    placeholder="Enter Your Password" minlength="8"
+                                    pattern="^(?=\S*?[A-Z])(?=\S*?[a-z])(?=\S*?[0-9])(?=\S*?[^\w\*])\S{8,}$"
+                                    title="Fill Your Valid Password" required>
+                                <div *ngIf='password.touched && password.invalid'>
+                                    <p class="text text-danger" *ngIf='password.errors.required'>This field is mandatory</p>
+                                    <p class="text text-danger" *ngIf='password.errors.minlength'>It should be minimum of
+                                        8 character</p>
+                                    <p class="text text-danger" *ngIf='password.errors.password'>This field can only
+                                        contain Valid Password</p>
+                                    <p class="text text-danger" *ngIf='password.errors.pattern'>Password must be Minimum
+                                        of 8 Characters...Must contains one lowercase characters, uppercase characters,
+                                        special symbols in the list \"@#$%\</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-info float-left" [disabled]='userLoginForm.invalid'>
+                                    Submit
+                                </button>
+                            </div>
+                            <div id="register-link" class="text-right">
+                                <a routerLink="/register" class="text-info">Register here</a>
+                            </div>
+                            <div id="forgot-link" class="text-right">
+                                <a routerLink="/forget-password" class="text-info">Forgot Password</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,23 @@
+<section class="cover">
+    <app-navbar></app-navbar>
+    <div class="container mt-4">
+        <div class="col-md-3 card card-body float-left" style="height:350px;" *ngFor='let room of roomService.rooms'>
+            <img [src]="room.imgURL" class="img-fluid" alt="" style="height: 150px;">
+            <h6 class="text-center">Room ID: {{room.roomId}}</h6>
+            <h6 class="text-center">Room Type: {{room.roomType}}</h6>
+            <h6 class="text-center">Room Rent: {{room.roomRent}}</h6>
+            <h6 class="text-center">Room Capacity: {{room.roomCapacity}}</h6>
+            <div class="row">
+
+                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal"
+                    (click)='selectRoom(room)'>
+                    Update Room
+                </button>
+                <button class="btn btn-outline-danger" (click)="deleteRoom(room)">
+                    <img src="https://image.shutterstock.com/image-vector/trash-can-rubbish-bin-flat-600w-1165271101.jpg"
+                        alt="" style="height: 50px;">
+                </button>
+            </div>
+        </div>
+    </div>
+</section>

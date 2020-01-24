@@ -1,0 +1,54 @@
+<section class="cover">
+<app-navbar></app-navbar>
+    <div id="login">
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                        <form #hotelForm='ngForm' (ngSubmit)='printForm(hotelForm)'>
+                            <h3 class="text-center text-info mt-3">Add New Hotel</h3>
+                            <div class="form-group">
+                                <label for="hotelName">Hotel Name : </label>
+                                <input type="text" name="hotelName" #hotelName='ngModel' ngModel required hotelName
+                                    class="form-control" placeholder="Enter Hotel Name"
+                                    pattern="^[a-zA-Z]+[\-'\s]?[a-zA-Z ]+$" minlength="3" title="Fill Your Hotel Name">
+                                <div *ngIf='hotelName.touched && hotelName.invalid'>
+                                    <p class="alert" *ngIf='hotelName.errors.required'>This field is mandatory</p>
+                                    <p class="alert alert-danger" *ngIf='hotelName.errors.minlength'>It should be minimum of
+                                        3 character</p>
+                                    <p class="alert alert-danger" *ngIf='hotelName.errors.pattern'>Hotel Name must be a
+                                        character</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="location">Hotel Location : </label>
+                                <input type="text" name="location" #location='ngModel' ngModel required location
+                                    class="form-control" placeholder="Enter location of Hotel"
+                                    pattern="^[a-zA-Z]+[\-'\s]?[a-zA-Z ]+$" minlength="3" title="Fill Your Hotel location">
+                                <div *ngIf='location.touched && location.invalid'>
+                                    <p class="alert" *ngIf='location.errors.required'>This field is mandatory</p>
+                                    <p class="alert alert-danger" *ngIf='location.errors.minlength'>It should be minimum of
+                                        3 character</p>
+                                    <p class="alert alert-danger" *ngIf='location.errors.pattern'>Hotel location must be a
+                                        character</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="location">Image URL : </label>
+                                <input type="text" name="imgURL" #imgURL='ngModel' ngModel imgURL class="form-control"
+                                    placeholder="imgURL">
+                            </div>
+                            <div *ngIf='imgURL.touched && imgURL.invalid'>
+                                <p class="alert alert-danger" *ngIf='imgURL.errors.required'>This Field is Mandatory</p>
+                            </div>
+    
+                            <button class="btn btn-outline-primary" type="submit" [disabled]='hotelForm.invalid'>
+                                Add Hotel
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

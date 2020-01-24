@@ -1,0 +1,28 @@
+<section class="cover">
+    <app-navbar></app-navbar>
+    <div class="col-md-8 offset-2 card card-body">
+        <h6 style="color: blue;"><I>Click On Hotel Image To See Available Rooms</I></h6>
+        <img [src]="selectedHotel.imgURL" class="img-fluid" alt="" (click)='selectedRoomDetails(selectedHotel.hotelId)'
+            style="height:300px; cursor: pointer;">
+        <h2 class="text-center">{{selectedHotel.hotelId}}</h2>
+        <h2 class="text-center">{{selectedHotel.location}}</h2>
+    </div>
+
+    <div class="container mt-4">
+        <div class="col-md-3 card card-body float-left" style="height:300px;" *ngFor='let room of roomDetails'
+            (click)='selectHotel(hotel)'>
+            <img [src]="room.imgURL" class="img-fluid" alt="" style="height: 100px;">
+            <h5 class="text-center">Room ID: {{room.roomId}}</h5>
+            <h5 class="text-center">Room Type: {{room.roomType}}</h5>
+            <!-- <p appColor>{{room.roomType}}</p> -->
+            <h5 class="text-center">Room Rent: {{room.roomRent}}</h5>
+            <h5 class="text-center">Room Capacity: {{room.roomCapacity}}</h5>
+            <div class="row">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
+                    (click)="bookRoom(room)" style="cursor: pointer;">
+                    Book Now
+                </button>
+            </div>
+        </div>
+    </div>
+</section>

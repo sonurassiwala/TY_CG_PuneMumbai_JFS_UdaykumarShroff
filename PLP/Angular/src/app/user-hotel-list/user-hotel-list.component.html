@@ -1,0 +1,22 @@
+<app-navbar></app-navbar>
+<body>
+    <div class="container h-100">
+        <div class="d-flex justify-content-center h-100">
+            <div class="searchbar">
+                <input class="search_input" type="text" name="" placeholder="Search..." [(ngModel)]='search'
+                    placeholder="Enter location...">
+                <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+                <!-- <input type="search" name="search" [(ngModel)]='search' placeholder="Enter location..." 
+            class="form-control"> -->
+            </div>
+        </div>
+    </div>
+    <div class="container mt-4">
+        <div class="col-md-3 card card-body float-left" style="height:250px;"
+            *ngFor='let hotel of hotelService.hotels | filter: search, index as i' (click)='selectHotel(hotel)'>
+            <img [src]="hotel.imgURL" class="img-fluid" alt="">
+            <h5 class="text-center">{{hotel.hotelName}}</h5>
+            <p appColor>{{hotel.location}}</p>
+        </div>
+    </div>
+</body>

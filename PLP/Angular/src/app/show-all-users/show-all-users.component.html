@@ -1,0 +1,34 @@
+<section class="cover">
+  <app-navbar></app-navbar>
+  <div class="container mt-4">
+    <table class="table table-bordered table-info table-hover">
+      <thead class="bg-dark text-light">
+        <tr>
+          <th>User ID</th>
+          <th>User Name</th>
+          <th>Email</th>
+          <th>Mobile Number</th>
+          <th>Gender</th>
+          <th>Nationality</th>
+          <th>Delete User</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor='let user of hotelService.users'>
+          <td>{{user.userId}}</td>
+          <td>{{user.userName}}</td>
+          <td>{{user.email}}</td>
+          <td>{{user.phoneNumber}}</td>
+          <td>{{user.gender}}</td>
+          <td>{{user.nationality}}</td>
+          <td>
+            <button class="btn btn-outline-danger" (click)='deleteUser(user.userId)'>
+              <img src="https://image.shutterstock.com/image-vector/trash-can-rubbish-bin-flat-600w-1165271101.jpg"
+                alt="" style="height: 50px;">
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

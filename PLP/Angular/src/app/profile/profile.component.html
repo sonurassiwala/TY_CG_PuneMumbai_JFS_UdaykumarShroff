@@ -1,0 +1,137 @@
+<section class="cover">
+<app-navbar></app-navbar>
+    <div class="container card card mt-5">
+        <div class="fb-profile">
+            <img class="fb-image-lg align-left"
+                src="https://userscontent2.emaze.com/images/2460b230-06f7-40ca-a42d-1f4c087d33a8/9e307a28f9f359392d8b07a95afc62b4.jpg"
+                alt="Profile image example" />
+            <img class="fb-image-profile thumbnail align-left" src="https://exactax.com/track/img/hr.png"
+                alt="Profile image example" />
+            <div class="card-body">
+                <h4 class="text-center" style="color: darkmagenta">{{hotelService.profile.userName}}</h4>
+                <hr>
+                <!-- <h6 class="text-center">User Role : </h6>
+        <h5 class="text-center">{{authService.profile.userType}}</h5> -->
+                <h6 class="text-center">User ID : </h6>
+                <p class="text-center">{{hotelService.profile.userId}}</p>
+                <h6 class="text-center">Email ID : </h6>
+                <p class="text-center">{{hotelService.profile.email}}</p>
+                <h6 class="text-center">Mobile Number : </h6>
+                <p class="text-center">{{hotelService.profile.phoneNumber}}</p>
+                <h6 class="text-center">Nationality : </h6>
+                <p class="text-center">{{hotelService.profile.nationality}}</p>
+                <h6 class="text-center">Password : </h6>
+                <p class="text-center">{{hotelService.profile.password}}</p>
+            </div>
+        </div>
+    </div> <!-- /container -->
+    <!-- Update Button With Modal Form-->
+    <div>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-info offset-2" data-toggle="modal" data-target="#exampleModal"
+            (click)='selectData(hotelService.profile)'>
+            Update Data
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h6 class="modal-title" id="exampleModalLabel">Make Any Updation</h6>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                            (click)='hotelService.getProfileData(userId)'>
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form #userUpdationForm='ngForm' (ngSubmit)="submitForm(userUpdationForm)">
+                            <input type="hidden" name="userId" #userId='ngModel' [(ngModel)]='selectedUserData.userId'>
+                            <input type="hidden" name="nationality" #nationality='ngModel' [(ngModel)]='selectedUserData.nationality'>
+                            <input type="hidden" name="gender" #gender='ngModel' [(ngModel)]='selectedUserData.gender'>
+                            <input type="hidden" name="userType" #userType='ngModel' [(ngModel)]='selectedUserData.userType'>
+                            <div class="alert alert-success" *ngIf='message'>{{message}}</div>
+                            <h3>Your Data!!!</h3>
+                            <hr>
+                            <div class="form-group">
+                                <label for="userName">Full Name</label>
+                                <input type="text" name="userName" #userName='ngModel' id="name"
+                                    class="form-control" placeholder="Enter Your Name"
+                                    pattern="^[a-zA-Z]+[\-'\s]?[a-zA-Z ]+$" minlength="3" title="Fill Your Name"
+                                    [(ngModel)]="selectedUserData.userName" required>
+                                <div *ngIf='userName.touched && userName.invalid'>
+                                    <p class="text" *ngIf='userName.errors.required'>This field is mandatory</p>
+                                    <p class="text text-danger" *ngIf='userName.errors.minlength'>It should be minimum
+                                        of
+                                        3 character</p>
+                                    <p class="text text-danger" *ngIf='userName.errors.pattern'>Your Name must be a
+                                        character</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">User Email</label>
+                                <input type="email" name="email" #email='ngModel' class="form-control"
+                                    placeholder="Enter Your Email" minlength="12"
+                                    pattern="^([\w-]+(?:\.[\w-]+))@((?:[\w-]+\.)\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$"
+                                    title="Fill Your Email" [(ngModel)]="selectedUserData.email" required>
+                                <div *ngIf='email.touched && email.invalid'>
+                                    <p class="text" *ngIf='email.errors.required'>This field is mandatory</p>
+                                    <p class="text text-danger" *ngIf='email.errors.minlength'>It should be minimum of
+                                        12
+                                        character
+                                    </p>
+                                    <p class="text text-danger" *ngIf='email.errors.email'>This field can only contain
+                                        email</p>
+                                    <p class="text text-danger" *ngIf='email.errors.pattern'>Email should be in the
+                                        form
+                                        qwerty@123gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="phoneNumber">Phone Number</label>
+                                <input type="text" name="phoneNumber" #phoneNumber='ngModel' id="mobileNumber"
+                                class="form-control" placeholder="Enter Phone Number" pattern="^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$"
+                                title="Fill Your Phone Number" maxlength="10" required  [(ngModel)]='selectedUserData.phoneNumber'>
+                            <div *ngIf='phoneNumber.touched && phoneNumber.invalid'>
+                                <p class="text text-danger" *ngIf='phoneNumber.errors.required'>This field is mandatory</p>
+                                <p class="text text-danger" *ngIf='phoneNumber.errors.pattern'>It must be of 10 digits or it must not start with number from 0 to 6</p>
+                                <p class="text text-danger" *ngIf='phoneNumber.errors.maxlength'>It must be of 10 digits</p>
+                            </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" name="password" #password='ngModel'
+                                    placeholder="Enter Your Password" minlength="8"
+                                    pattern="^(?=\S*?[A-Z])(?=\S*?[a-z])(?=\S*?[0-9])(?=\S*?[^\w\*])\S{8,}$"
+                                    title="Fill Your Valid Password" [(ngModel)]="selectedUserData.password" required>
+                                <div *ngIf='password.touched && password.invalid'>
+                                    <p class="text" *ngIf='password.errors.required'>This is field is mandatory</p>
+                                    <p class="text text-danger" *ngIf='password.errors.minlength'>It should be minimum
+                                        of
+                                        8 character
+                                    </p>
+                                    <p class="text text-danger" *ngIf='password.errors.password'>This field can only
+                                        contain Valid
+                                        Password</p>
+                                    <p class="text text-danger" *ngIf='password.errors.pattern'>Password must be
+                                        Minimum
+                                        of 8
+                                        Characters...Must contains one lowercase characters, uppercase characters,
+                                        special
+                                        symbols in
+                                        the list \"@#$%\</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-outline-primary float-right">
+                                    Update Changes
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,70 @@
+<section class="cover">
+    <app-navbar></app-navbar>
+    <div class="bg">
+        <div class="container col-md-4 mr-5" style="background-color: gainsboro ;">
+            <h4 class="text text-success">{{message}}</h4>
+            <div class="text-dark text-underline">
+                <h3>Add New Room</h3>
+            </div>
+            <div class="card card-body">
+                <form #addRoom="ngForm" (ngSubmit)="submitForm(addRoom)">
+                    <div>
+                        <label for="roomCapacity">Room Capacity:</label><br>
+                        <select name="roomCapacity" id="roomCapacity" #roomCapacity='ngModel' roomCapacity ngModel
+                            required class="form-control" title="Select number of people">
+                            <option value="" selected disabled>Select</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="roomType">Room Type:</label><br>
+                        <select name="roomType" id="roomType" #roomType='ngModel' roomType ngModel required
+                            class="form-control" title="Select Room Type">
+                            <option value="" selected disabled>Select</option>
+                            <option value="AC">AC</option>
+                            <option value="NON AC">NON AC</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="roomRent">Room Rent:</label>
+                        <input type="text" name="roomRent" class="form-control" #roomRent="ngModel" ngModel
+                            placeholder="Enter Room Rent" title="Enter Room Rent" pattern="^[0-9]{1,6}$" maxlength="6"
+                            required>
+                        <div *ngIf='roomRent.touched && roomRent.invalid'>
+                            <p class="text text-danger" *ngIf='roomRent.errors.required'>This field is mandatory</p>
+                            <p class="text text-danger" *ngIf='roomRent.errors.pattern'>It must be a number</p>
+                            <p class="text text-danger" *ngIf='roomRent.errors.maxlength'>It should contain maximum of 6
+                                digits</p>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="roomStatus">Room Status:</label><br>
+                        <select name="roomStatus" id="roomStatus" #roomStatus='ngModel' roomStatus ngModel required
+                            class="form-control" title="Select Room Status">
+                            <option value="" selected disabled>Select</option>
+                            <option value="Available">Available</option>
+                            <option value="Unavailable">Unavailable</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="imgURL">Room Image URL:</label>
+                        <input type="text" name="imgURL" class="form-control" #imgURL="ngModel" ngModel
+                            placeholder="Enter Room image URL" required>
+                    </div>
+                    <br>
+                    <div class="btn-group float-right">
+                        <button type="reset" class="btn btn-outline-dark">Reset</button>
+                        <button type="submit" class="btn btn-outline-success"
+                            [disabled]="addRoom.invalid">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,14 @@
+.cover {
+    background: #2b2d34 url(https://www.purehd.com/hubfs/PureHD_September2019/Images/Home-Slider01.jpg) center;
+    background-size: cover;
+    min-height: 90rem;
+    height: 100vh;
+    border-radius: 0;
+    width: 100%;
+    color: #fff;
+    padding-top: 1rem; }
+
+    div {
+        font-style: italic;
+        color: black;
+    }

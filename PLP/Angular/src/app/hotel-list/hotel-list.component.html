@@ -1,0 +1,32 @@
+<section class="cover">
+<app-navbar></app-navbar>
+    <div class="container">
+
+        <div class="d-flex justify-content-center h-100">
+            <div class="searchbar">
+                <input class="search_input" type="text" name="" placeholder="Search..." [(ngModel)]='search'
+                    placeholder="Enter Hotel Location...">
+                    <a href="#" class="search_icon"><i class="fas fa-search"><img
+                        src="http://www.clker.com/cliparts/z/w/Q/7/f/C/search-logo-hi.png" id='i1' alt=""></i></a>
+                <!-- <input type="search" name="search" [(ngModel)]='search' placeholder="Enter location..." 
+            class="form-control"> -->
+            </div>
+        </div>
+    </div>
+    <div class="container mt-4">
+        <div class="alert alert-success" *ngIf='message'>{{message}}</div>
+        <div class="col-md-3 card card-body float-left" style="height:800px;"
+            *ngFor='let hotel of hotelService.hotels | filter: search, index as i' (click)='selectHotel(hotel)' style="cursor: pointer;">
+            <img [src]="hotel.imgURL" class="img-fluid" alt="" style="height: 100px;">
+            <h5 class="text-center">{{hotel.hotelName}}</h5>
+            <p appColor class="text-center">{{hotel.location}}</p>
+            <button (click)='deleteHotel(hotel.hotelId)' *ngIf='isAdmin()'>
+                <img src="https://image.shutterstock.com/image-vector/trash-can-rubbish-bin-flat-600w-1165271101.jpg"
+                alt="" style="height: 50px;">
+            </button>
+            <!-- <button class="btn btn-dark" (click)='bookHotel()' *ngIf='isUser()'>
+                Book
+            </button> -->
+        </div>
+    </div>
+</section>

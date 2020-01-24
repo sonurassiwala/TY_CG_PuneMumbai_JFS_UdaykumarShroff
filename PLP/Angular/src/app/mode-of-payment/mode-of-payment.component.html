@@ -1,0 +1,22 @@
+<section class="cover">
+<app-navbar></app-navbar>
+    <br><br><br>
+    <div class="col-md-8 offset-2 mt-5 card card-body">
+        <table class="table align-center">
+            <thead class="thead-light">
+                <tr>
+                    <th>Your Amount</th>
+                    <th>Rs.{{hotelService.totalAmount}}</th>
+                </tr>
+            </thead>
+        </table>
+        <div class="card card-body">
+            <h2 style="text-align: center;">Payment Mode</h2>
+            <div class="offset-5">
+                <button class="btn btn-success btn-pressure pull-left" data-toggle="modal"
+                (click)='selectMethod()'>Using Card</button>
+                <button class="btn btn-danger btn-pressure pull-left" (click)='cashPayment()'>Cash</button>
+            </div>
+        </div>
+    </div>
+</section>

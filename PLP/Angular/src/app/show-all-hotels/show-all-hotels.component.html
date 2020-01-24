@@ -1,0 +1,13 @@
+<app-navbar></app-navbar>
+<div class="container col-md-3 card card-body float-left" *ngFor='let hotel of hotels' style="height: 250px;">
+  <h5 class="text-center mt-5">Hotel Name : {{hotel.hotelName}}</h5>
+  <button (click)='deleteHotel(hotel.hotelId)' *ngIf='isAdmin()'>
+    Delete
+  </button>
+  <button (click)='updateHotel(hotel.hotelId)' *ngIf='isAdmin()'>
+    Update
+  </button>
+  <button (click)='bookHotel()' *ngIf='isUser()'>
+    Book
+  </button>
+</div>

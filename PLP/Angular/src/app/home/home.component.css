@@ -1,0 +1,228 @@
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+body {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  background-color: #ffffff;
+  color: #46484a; }
+
+a {
+  color: #59a0d7; }
+
+h1 {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 4rem;
+  font-weight: 600; }
+
+h2 {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 2.8rem;
+  font-weight: 500; }
+
+h3 {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: 500; }
+
+h4 {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+p {
+  color: #696b6e;
+  font-size: .9rem; }
+
+.divider {
+  display: block;
+  width: 6rem;
+  height: 0.3rem;
+  background-color: #dfe1e5;
+  margin: 2rem auto; }
+  
+.navbar-trans {
+  background: transparent; }
+
+a.navbar-brand, a.logo {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #fff !important;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 0; }
+
+a.logo:hover, a.logo:active, a.logo:focus {
+  text-decoration: none; }
+
+li.nav-item .btn {
+  margin-top: .2rem;
+  margin-left: .4rem; }
+li.nav-item .btn-white {
+  color: #46484a; }
+
+.cover {
+  background: #2b2d34 url(https://userscontent2.emaze.com/images/2460b230-06f7-40ca-a42d-1f4c087d33a8/9e307a28f9f359392d8b07a95afc62b4.jpg) center;
+  background-size: cover;
+  min-height: 50rem;
+  height: auto;
+  border-radius: 0;
+  width: 100%;
+  color: #fff;
+  padding-top: 1rem; }
+  
+  .cover h1 {
+    font-weight: 200; }
+  
+  .cover p.lead {
+    margin: 2rem auto;
+    color: rgba(255, 255, 255, 0.75); }
+  
+  .cover .cover-container {
+    display: table;
+    height: 100%;
+    min-height: 44rem;
+    margin: 0 auto; }
+    
+    .btn-primary, .btn-outline-primary, .btn-secondary, .btn-outline-secondary, .btn-white, .btn-outline-white, .btn-success, .btn-outline-success, .btn-info, .btn-outline-info, .btn-warning, .btn-outline-warning, .btn-danger, .btn-outline-danger {
+  font-size: .75rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: .3rem; }
+
+.btn-outline-primary, .btn-outline-secondary, .btn-outline-white, .btn-outline-success, .btn-outline-info, .btn-outline-warning, .btn-outline-danger {
+  border-width: 0.15rem; }
+
+.btn-lg {
+  padding: 1.1rem 2.5rem;
+  font-size: .9rem; }
+
+.btn-primary, .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+  background-color: #59a0d7;
+  border-color: #59a0d7; }
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+  background-color: #4089c1;
+  border-color: #4089c1; }
+
+.btn-outline-primary, .btn-outline-primary:visited {
+  color: #59a0d7;
+  border-color: #59a0d7;
+  background: none; }
+
+.btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active {
+  background-color: #59a0d7;
+  border-color: #59a0d7;
+  color: #fff; }
+
+.btn-secondary {
+  border-color: #696b6e;
+  background-color: #696b6e;
+  color: #fff; }
+
+.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
+  border-color: #46484a;
+  background-color: #46484a;
+  color: #fff; }
+
+.btn-outline-secondary, .btn-outline-secondary:visited {
+  color: #696b6e;
+  border-color: #696b6e;
+  background: none; }
+
+.btn-outline-secondary:hover, .btn-outline-secondary:focus, .btn-outline-secondary:active {
+  border-color: #696b6e;
+  background: #696b6e;
+  color: #fff; }
+
+.btn-white {
+  border-color: #fff;
+  background-color: #fff;
+  color: #46484a; }
+
+.btn-white:hover, .btn-white:focus, .btn-white:active {
+  border-color: #dfe1e5;
+  background-color: #dfe1e5;
+  color: #46484a; }
+
+.btn-outline-white, .btn-outline-white:visited {
+  background: none;
+  color: #fff;
+  border-color: #fff; }
+
+.btn-outline-white:hover, .btn-outline-white:focus, .btn-outline-white:active {
+  color: #46484a;
+  background: #fff; }
+
+.link-white, link-white:visited {
+  font-size: .75rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: .3rem;
+  border: 0;
+  color: #fff; }
+
+.link-white:hover, .link-white:focus, .link-white:active {
+  color: #dfe1e5 !important; }
+
+  
+.body {
+background-image: url("https://cdn.pixabay.com/photo/2017/06/07/02/30/hotel-2379087_960_720.jpg");
+height: 100%;
+}
+.searchbar{
+margin-bottom: auto;
+margin-top: auto;
+height: 60px;
+background-color:#e3e6ec;
+border-radius: 30px;
+padding: 10px;
+}
+
+    .search_input{
+    color: black;
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 0;
+    caret-color:transparent;
+    line-height: 40px;
+    transition: width 0.4s linear;
+    }
+
+    .searchbar:hover > .search_input{
+    padding: 0 10px;
+    width: 450px;
+    caret-color:red;
+    transition: width 0.4s linear;
+    }
+
+    .searchbar:hover > .search_icon{
+    background: white;
+    color: #e74c3c;
+    }
+
+    .search_icon{
+    height: 40px;
+    width: 40px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color:white;
+    text-decoration:none;
+    }
+
+    #i1{
+      height: 40px;
+    }
